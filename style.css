@@ -1,0 +1,338 @@
+/* General styles */
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    min-width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #000738;
+    color: #fff; /* Default text color for contrast */
+}
+
+/* Menu styles */
+.menu {
+    background-color: #444; /* Slightly lighter for better contrast */
+    padding: 10px 0;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu li.logo img {
+    width: 50px;
+}
+
+.menu li.active {
+    font-weight: bold;
+    color: #ff9800; /* Highlight active menu item */
+}
+
+.signup-btn {
+    background-color: #ff9800;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.signup-btn:hover {
+    background-color: #e89313;
+}
+
+/* Banner styles */
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+    margin-left:20px;
+}
+
+.app-text h1 {
+    font-size: 46px;
+    
+    line-height: 1.2;
+    color: #fffbfb; /* White for readability */
+}
+
+.app-text p {
+    color: #aaa; /* Lighter text for contrast */
+    line-height: 1.5;
+    font-size:20px;
+}
+
+.play-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 20px;
+    padding-left:40px;
+}
+
+.play-btn-inner {
+    width: 50px;
+    height: 50px;
+    background-color: #ff9800;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.app-picture img {
+    max-width: 100%;
+    height: auto;
+    width:600px;
+    margin:40px;
+}
+.quick-links {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 0px;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.quick-links li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* Adjust the width as needed */
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.quick-links li i {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #ff9800; /* Icon color */
+}
+
+.quick-links li p {
+    margin: 0;
+    font-size: 14px;
+    color: #fff; /* Text color */
+}
+
+.quick-links li:hover {
+    transform: scale(1.1);
+    color: #ff9800; /* Text color on hover */
+}
+
+
+/* Section styles */
+.section#services {
+    padding: 60px 20px;
+    background-color: #1c1c2e; /* Dark background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.section#services h2 {
+    font-size: 32px;
+    color: #ffffff; /* White color for headings */
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section#services p {
+    color: #b3b3b3; /* Lighter color for the paragraph text */
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.section#services ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px; /* Center the list with max width */
+}
+
+.section#services li {
+    background-color: #282844; /* Slightly lighter background for items */
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    transition: transform 0.3s, background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.section#services li:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    background-color: #383857; /* Change color on hover */
+}
+
+.section#services li strong {
+    color: #ff9800; /* Accent color for strong text */
+    margin-right: 10px;
+}
+
+.section#services li::before {
+    content: '\f0da'; /* FontAwesome icon (e.g., a caret or arrow) */
+    font-family: FontAwesome;
+    color: #ff9800;
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+
+
+/* Coin list styles */
+.coin-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.coin {
+    width: 22%;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #e3e3e3;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+    color: #fff;
+    opacity: 0; /* Start hidden */
+    animation: fadeInUp 1s ease-out forwards; /* Apply animation */
+}
+
+/* Optionally delay each item's animation for a staggered effect */
+.coin:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.coin:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.coin:nth-child(3) {
+    animation-delay: 0.6s;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Add delays for additional coins as needed */
+
+
+
+
+.coin img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.coin:hover {
+    transform: scale(1.05);
+    background-color: #333; /* Slightly lighter on hover */
+}
+.coin:hover p{
+    color: #e6e5e5; /* Lighter text for names */
+}
+
+.coin h3 {
+    font-size: 24px;
+    color: #ff9800; /* Highlight price */
+    margin: 10px 0;
+}
+
+.coin p {
+    color: #5a5a5a; /* Lighter text for names */
+}
+
+/* Contact section styles */
+.section#contact {
+    padding: 60px 20px;
+    background-color: #1c1c2e; /* Matching dark background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-top: 0px;
+}
+
+.section#contact h2 {
+    font-size: 32px;
+    color: #ffffff; /* White color for headings */
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section#contact p {
+    color: #b3b3b3; /* Lighter color for paragraph text */
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.social-icons ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.social-icons li {
+    margin: 0 15px;
+    transition: transform 0.3s;
+}
+
+.social-icons a {
+    color: #ffffff; /* Default color for social icons */
+    font-size: 30px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff9800; /* Accent color on hover */
+    transform: scale(1.2); /* Scale effect on hover */
+}
